@@ -1,2 +1,3 @@
-# Cosmetics
+# SuperCosmetics
+
 A PMMP cosmetic plugin

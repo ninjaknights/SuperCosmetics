@@ -15,16 +15,16 @@ class EventListener implements Listener
         $player = $event->getPlayer();
         $item = VanillaItems::NETHER_STAR();
         $item->setCustomName("Cosmetics");
-        $player->getInventory()->setItem(4,$item);
+        $player->getInventory()->setItem(4, $item);
 
     }
 
-    public function onInteract(PlayerInteractEvent $event)
+    public function onInteract(PlayerInteractEvent $event): void
     {
         $player = $event->getPlayer();
         $name = $player->getInventory()->getItemInHand()->getCustomName();//Item Name
 
-        if($name == "Cosmetics") (new forms\MainForm)->menuForm($player);
+        if ($name === "Cosmetics") (new forms\MainForm)->menuForm($player);
     }
 
 }

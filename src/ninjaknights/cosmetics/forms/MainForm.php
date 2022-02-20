@@ -1,28 +1,30 @@
-<?php 
+<?php
 
 namespace ninjaknights\cosmetics\forms;
 
 use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\player\Player;
 
-class MainForm {
-    
-    public function menuForm($player) {
+class MainForm
+{
+
+    public function menuForm(Player $player)
+    {
         $form = new SimpleForm(function (Player $player, $data) {
-        $result = $data;
-            if($result === null) {
-                return true;
+            $result = $data;
+            if ($result === null) {
+                return;
             }
-            switch($result) {
+            switch ($result) {
                 case 0:
                     (new ParticleForm)->particleForm($player);
-                break;
+                    break;
             }
         });
-           
+
         $form->setTitle("Cosmetics");
-        $form->addButton("Particles",0,"",0);
-        $form->sendToPlayer($player);
+        $form->addButton("Particles", 0, "", 0);
+        $player->sendForm($form);
     }
 
 }
