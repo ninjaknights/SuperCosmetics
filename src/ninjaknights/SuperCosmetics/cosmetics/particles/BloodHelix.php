@@ -27,23 +27,13 @@ class BloodHelix extends Task
                 $x = $player->getPosition()->getX();
                 $y = $player->getPosition()->getY();
                 $z = $player->getPosition()->getZ();
-                if ($this->count < 0) {
-                    $this->count++;
-                    return;
-                }
-                $time = microtime(true) - $this->plugin->getServer()->getStartTime();
-                $seconds = floor($time % 14);
-                $size = $seconds / 10;
-                $a = cos(deg2rad($this->count / 0.04)) * $size;
-                $b = sin(deg2rad($this->count / 0.04)) * $size;
 
-                $t = microtime(true) - $this->plugin->getServer()->getStartTime();
-                $s = floor($t % 14);
-                $c = $s / 5;
-                $player->getWorld()->addParticle(new Vector3($x - $a, $y - $c + 2.8, $z - $b), new RedstoneParticle());
-                $player->getWorld()->addParticle(new Vector3($x + $a, $y - $c + 2.8, $z + $b), new RedstoneParticle());
-                $player->getWorld()->addParticle(new Vector3($x - $b, $y - $c + 2.8, $z + $a), new RedstoneParticle());
-                $player->getWorld()->addParticle(new Vector3($x + $b, $y - $c + 2.8, $z - $a), new RedstoneParticle());
+                $size = 1;
+                $a = cos(deg2rad($this->count / 0.09)) * $size;
+                $b = sin(deg2rad($this->count / 0.09)) * $size;
+                $c = sin(deg2rad($this->count / 0.2)) * $size;
+                $player->getWorld()->addParticle(new Vector3($x - $a, $y + 2, $z - $b), new RedstoneParticle());
+
                 $this->count++;
             }
         }

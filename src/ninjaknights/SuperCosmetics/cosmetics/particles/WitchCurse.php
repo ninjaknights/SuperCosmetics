@@ -27,8 +27,8 @@ class WitchCurse extends Task
                 $x = $player->getPosition()->getX();
                 $y = $player->getPosition()->getY();
                 $z = $player->getPosition()->getZ();
-                $a = cos($this->count * 0.1) * 2;
-                $b = sin($this->count * 0.1) * 2;
+                $a = cos($this->count * 0.1) * 1.2;
+                $b = sin($this->count * 0.1) * 1.2;
                 $player->getWorld()->addParticle(new Vector3($x + $a, $y + 1, $z + $b), new WitchSpellParticle());
                 $player->getWorld()->addParticle(new Vector3($x - $a, $y + 1, $z - $b), new WitchSpellParticle());
                 $player->getWorld()->addParticle(new Vector3($x + $b, $y + 1, $z - $a), new WitchSpellParticle());

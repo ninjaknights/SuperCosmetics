@@ -34,15 +34,18 @@ class RainCloud extends Task
                 $d = sin(deg2rad($this->count / 0.04)) * 0.8;
                 $player->getWorld()->addParticle(new Vector3($x - $a, $y + 3, $z - $b), new EvaporationParticle());
                 $player->getWorld()->addParticle(new Vector3($x - $b, $y + 3, $z - $a), new EvaporationParticle());
-
-                $player->getWorld()->addParticle(new Vector3($x - $a, $y + 2.3, $z - $b), new WaterSplashParticle());
-                $player->getWorld()->addParticle(new Vector3($x - $b, $y + 2.3, $z - $a), new WaterSplashParticle());
-
                 $player->getWorld()->addParticle(new Vector3($x + $c, $y + 3, $z + $d), new EvaporationParticle());
-                $player->getWorld()->addParticle(new Vector3($x + $c, $y + 3, $z + $d), new EvaporationParticle());
-
+                $player->getWorld()->addParticle(new Vector3($x + $d, $y + 3, $z + $c), new EvaporationParticle());
                 $player->getWorld()->addParticle(new Vector3($x, $y + 3, $z), new EvaporationParticle());
-                $player->getWorld()->addParticle(new Vector3($x, $y + 2.3, $z), new WaterSplashParticle());
+
+                $player->getWorld()->addParticle(new Vector3($x - $a, $y + 2.2, $z + $b), new WaterSplashParticle());
+                $player->getWorld()->addParticle(new Vector3($x - $b, $y + 2.2, $z + $a), new WaterSplashParticle());
+                $player->getWorld()->addParticle(new Vector3($x + $a, $y + 2.2, $z - $b), new WaterSplashParticle());
+                $player->getWorld()->addParticle(new Vector3($x + $b, $y + 2.2, $z - $a), new WaterSplashParticle());
+                $player->getWorld()->addParticle(new Vector3($x, $y + 2.2, $z), new WaterSplashParticle());
+
+
+                $this->count++;
             }
         }
     }
