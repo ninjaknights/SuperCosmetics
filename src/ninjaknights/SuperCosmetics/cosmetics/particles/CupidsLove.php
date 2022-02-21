@@ -1,8 +1,8 @@
 <?php
 
-namespace ninjaknights\cosmetics\particles;
+namespace ninjaknights\SuperCosmetics\cosmetics\particles;
 
-use ninjaknights\cosmetics\Main;
+use ninjaknights\SuperCosmetics\Main;
 use pocketmine\math\Vector3;
 use pocketmine\world\particle\HeartParticle;
 

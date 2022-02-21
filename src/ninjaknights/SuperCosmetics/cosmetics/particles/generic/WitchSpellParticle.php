@@ -1,6 +1,6 @@
 <?php
 
-namespace ninjaknights\cosmetics\particles\generic;
+namespace ninjaknights\SuperCosmetics\cosmetics\particles\generic;
 
 use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\protocol\LevelEventPacket;

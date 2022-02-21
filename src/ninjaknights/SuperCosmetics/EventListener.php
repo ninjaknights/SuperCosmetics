@@ -1,6 +1,6 @@
 <?php
 
-namespace ninjaknights\cosmetics;
+namespace ninjaknights\SuperCosmetics;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;

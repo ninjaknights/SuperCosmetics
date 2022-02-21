@@ -1,9 +1,9 @@
 <?php
 
-namespace ninjaknights\cosmetics\particles;
+namespace ninjaknights\SuperCosmetics\cosmetics\particles;
 
-use ninjaknights\cosmetics\Main;
-use ninjaknights\cosmetics\particles\generic\WitchSpellParticle;
+use ninjaknights\SuperCosmetics\Main;
+use ninjaknights\SuperCosmetics\cosmetics\particles\generic\WitchSpellParticle;
 use pocketmine\math\Vector3;
 use pocketmine\scheduler\Task;
 

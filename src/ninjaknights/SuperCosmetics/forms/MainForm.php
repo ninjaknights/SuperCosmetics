@@ -1,6 +1,6 @@
 <?php
 
-namespace ninjaknights\cosmetics\forms;
+namespace ninjaknights\SuperCosmetics\forms;
 
 use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\player\Player;

@@ -1,6 +1,6 @@
 <?php
 
-namespace ninjaknights\cosmetics;
+namespace ninjaknights\SuperCosmetics;
 
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;

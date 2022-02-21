@@ -1,13 +1,13 @@
 <?php
 
-namespace ninjaknights\cosmetics\particles\generic;
+namespace ninjaknights\SuperCosmetics\cosmetics\particles\generic;
 
 use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\protocol\LevelEventPacket;
 use pocketmine\network\mcpe\protocol\types\ParticleIds;
 use pocketmine\world\particle\Particle;
 
-class EvaporationParticle implements Particle
+class WaterSplashParticle implements Particle
 {
 
     /**
@@ -15,6 +15,7 @@ class EvaporationParticle implements Particle
      */
     public function encode(Vector3 $pos): array
     {
-        return [LevelEventPacket::standardParticle(ParticleIds::EVAPORATION, 0, $pos)];
+        return [LevelEventPacket::standardParticle(ParticleIds::WATER_SPLASH, 0, $pos)];
+
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace ninjaknights\cosmetics\particles;
+namespace ninjaknights\SuperCosmetics\cosmetics\particles;
 
-use ninjaknights\cosmetics\Main;
+use ninjaknights\SuperCosmetics\Main;
 use pocketmine\math\Vector3;
 use pocketmine\scheduler\Task;
 use pocketmine\world\particle\FlameParticle;

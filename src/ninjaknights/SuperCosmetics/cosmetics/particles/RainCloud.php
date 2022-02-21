@@ -1,10 +1,10 @@
 <?php
 
-namespace ninjaknights\cosmetics\particles;
+namespace ninjaknights\SuperCosmetics\cosmetics\particles;
 
-use ninjaknights\cosmetics\Main;
-use ninjaknights\cosmetics\particles\generic\EvaporationParticle;
-use ninjaknights\cosmetics\particles\generic\WaterSplashParticle;
+use ninjaknights\SuperCosmetics\Main;
+use ninjaknights\SuperCosmetics\cosmetics\particles\generic\EvaporationParticle;
+use ninjaknights\SuperCosmetics\cosmetics\particles\generic\WaterSplashParticle;
 use pocketmine\math\Vector3;
 use pocketmine\scheduler\Task;
 
