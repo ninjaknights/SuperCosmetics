@@ -24,6 +24,10 @@ class MainForm
                     break;
                 case 2:
                     (new HatForm)->hatForm($player);
+                    break;
+                case 3:
+                    (new MorphForm())->morphForm($player);
+                    break;
             }
         });
 

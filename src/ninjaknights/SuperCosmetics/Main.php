@@ -2,6 +2,7 @@
 
 namespace ninjaknights\SuperCosmetics;
 
+use ninjaknights\SuperCosmetics\listeners\EventListener;
 use ninjaknights\SuperCosmetics\util\skin\SkinUtil;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
@@ -15,21 +16,25 @@ class Main extends PluginBase
     public function onEnable(): void
     {
         self::$instance = $this;
-        $a = new SkinUtil();
-        $a->getSkins();
 
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
         foreach (["steve.png", "steve.json"] as $file) {
             $this->saveResource($file);
         }
-        foreach (["spacesuit", "alien", "frog", "youtube"] as $suits) {
+        foreach (["zombie", "creeper"] as $morphs) {
+            $this->saveResource("skins/morphs/" . $morphs . ".png");
+            $this->saveResource("skins/morphs/" . $morphs . ".json");
+        }
+        foreach (["spacesuit", "alien", "frog"] as $suits) {
             $this->saveResource("skins/suits/" . $suits . ".png");
             $this->saveResource("skins/suits/" . $suits . ".json");
         }
-        foreach (["tv", "melon"] as $hats) {
+        foreach (["tv", "melon", "cowboy", "crown", "top", "glass", "pumpkin", "witch"] as $hats) {
             $this->saveResource("skins/hats/" . $hats . ".png");
             $this->saveResource("skins/hats/" . $hats . ".json");
         }
+        $skin = new SkinUtil();
+        $skin->getSkins();
     }
 
     // Fake Functions

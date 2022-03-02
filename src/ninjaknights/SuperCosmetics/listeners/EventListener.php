@@ -1,7 +1,8 @@
 <?php
 
-namespace ninjaknights\SuperCosmetics;
+namespace ninjaknights\SuperCosmetics\listeners;
 
+use ninjaknights\SuperCosmetics\forms\MainForm;
 use ninjaknights\SuperCosmetics\util\skin\SkinUtil;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
@@ -28,7 +29,7 @@ class EventListener implements Listener
         $player = $event->getPlayer();
         $name = $player->getInventory()->getItemInHand()->getCustomName();//Item Name
 
-        if ($name === "Cosmetics") (new forms\MainForm)->menuForm($player);
+        if ($name === "Cosmetics") (new MainForm)->menuForm($player);
     }
 
 }

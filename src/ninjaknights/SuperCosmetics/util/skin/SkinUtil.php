@@ -68,7 +68,6 @@ class SkinUtil
         return new Skin("Standard_CustomSlim", $bytes);
     }
     //Changes the whole skin || Example: Suits, Morphs
-
     /**
      * @throws JsonException
      */
@@ -260,7 +259,7 @@ class SkinUtil
         $allDirs = scandir($path);
         foreach ($allDirs as $foldersName) {
             if (is_dir($path . $foldersName)) {
-                $main->skinTypes[] = $foldersName; //This is either Hats or Suits or Morphs
+                $main->skinTypes[] = $foldersName;
                 $allFiles = scandir($path . $foldersName);
                 foreach ($allFiles as $allFilesName) {
                     if (strpos($allFilesName, ".json")) {
